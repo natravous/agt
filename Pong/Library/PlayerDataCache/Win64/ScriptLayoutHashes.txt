@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-G:/Isi GitHub/agt/Pong/Game/Pong.exe
+G:/Isi GitHub/agt/Pong/Build/Pong.exe
 SceneListBegin?
 Assets/Scenes/Pong.unity
 SceneListEnd?

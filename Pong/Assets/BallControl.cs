@@ -79,4 +79,6 @@ public class BallControl : MonoBehaviour
     {
         trajectoryOrigin = transform.position;
     }
+
+    //god help!
 }

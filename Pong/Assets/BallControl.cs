@@ -46,20 +46,28 @@ public class BallControl : MonoBehaviour
     void PushBall()
     {
         // Tentukan nilai komponen y dari gaya dorong antara -yInitialForce dan yInitialForce
-        //float yRandomInitialForce = Random.Range(-yInitialForce, yInitialForce);
+        float yRandomInitialForce = Random.Range(-yInitialForce, yInitialForce);
 
         // Tentukan nilai acak antara 0 (inklusif) dan 2 (eksklusif)
-        float randomDirection = Random.Range(0, 2);
+        float randomDirection = Random.Range(0, 4);
 
         // Jika nilainya di bawah 1, bola bergerak ke kiri. 
         // Jika tidak, bola bergerak ke kanan.
         if (randomDirection < 1f)
         {
-            rigidBody2D.AddForce(new Vector2(-xInitialForce, yInitialForce));
+            rigidBody2D.AddForce(new Vector2(-xInitialForce, -yInitialForce));
         }
-        else
+        else if (randomDirection >= 1f && randomDirection < 2f)
         {
             rigidBody2D.AddForce(new Vector2(xInitialForce, yInitialForce));
+        }
+        else if (randomDirection >= 2f && randomDirection < 3f)
+        {
+            rigidBody2D.AddForce(new Vector2(-xInitialForce, yInitialForce));
+        }
+        else if (randomDirection >= 3)
+        {
+            rigidBody2D.AddForce(new Vector2(xInitialForce, -yInitialForce));
         }
 
 
